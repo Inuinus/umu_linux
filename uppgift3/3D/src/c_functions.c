@@ -2,7 +2,6 @@
 
 
 #include <stdio.h>
-
 #include "c.h"
 
 void print_C()

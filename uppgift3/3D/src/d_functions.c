@@ -2,7 +2,6 @@
 
 
 #include <stdio.h>
-
 #include "d.h"
 void print_D()
 {
