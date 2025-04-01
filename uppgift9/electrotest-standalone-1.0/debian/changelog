@@ -1,0 +1,6 @@
+electrotest-standalone (1.0-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- linus <>  Tue, 01 Apr 2025 08:10:23 +0200
