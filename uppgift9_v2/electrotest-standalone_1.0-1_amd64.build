@@ -2,7 +2,7 @@
 dpkg-buildpackage: info: source package electrotest-standalone
 dpkg-buildpackage: info: source version 1.0-1
 dpkg-buildpackage: info: source distribution UNRELEASED
-dpkg-buildpackage: info: source changed by linus <>
+dpkg-buildpackage: info: source changed by linus <linus@example.com>
  dpkg-source --before-build .
 dpkg-buildpackage: info: host architecture amd64
  debian/rules clean
@@ -15,6 +15,7 @@ make[1]: Leaving directory '/home/linus/github_space/umu_linux/uppgift9_v2/elect
    dh_clean
 	rm -f debian/debhelper-build-stamp
 	rm -rf debian/.debhelper/
+	rm -f debian/electrotest-standalone.debhelper.log
 	rm -f -- debian/electrotest-standalone.substvars debian/files
 	rm -fr -- debian/electrotest-standalone/ debian/tmp/
 	find .  \( \( \
@@ -41,7 +42,7 @@ make[1]: Entering directory '/home/linus/github_space/umu_linux/uppgift9_v2/elec
 cc -o electrotest-standalone electrotest-standalone.c -lm
 make[1]: Leaving directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
    dh_auto_test
-	rm -fr -- /tmp/dh-xdg-rundir-dpBAfEuC
+	rm -fr -- /tmp/dh-xdg-rundir-Fk2lIVzD
    create-stamp debian/debhelper-build-stamp
    dh_prep
 	rm -f -- debian/electrotest-standalone.substvars
@@ -99,36 +100,6 @@ dpkg-genchanges: info: including full source code in upload
  dpkg-source --after-build .
 dpkg-buildpackage: info: full upload (original source is included)
 Now running lintian electrotest-standalone_1.0-1_amd64.changes ...
-E: electrotest-standalone: bogus-mail-host-in-debian-changelog linus <> (for version 1.0-1) [usr/share/doc/electrotest-standalone/changelog.Debian.gz:1]
-E: electrotest-standalone: changelog-is-dh_make-template [usr/share/doc/electrotest-standalone/changelog.Debian.gz:1]
-E: electrotest-standalone source: empty-debian-tests-control [debian/tests/control]
-E: electrotest-standalone source: malformed-contact Maintainer linus <>
-E: electrotest-standalone: malformed-contact Maintainer linus <>
-E: electrotest-standalone changes: malformed-contact Changed-By linus <>
-E: electrotest-standalone changes: malformed-contact Maintainer linus <>
-E: electrotest-standalone source: unknown-file-in-debian-source [debian/source/control]
-W: electrotest-standalone source: bad-homepage <insert the upstream URL, if relevant>
-W: electrotest-standalone: bad-homepage <insert the upstream URL, if relevant>
-W: electrotest-standalone: copyright-has-url-from-dh_make-boilerplate
-W: electrotest-standalone: copyright-without-copyright-notice
 W: electrotest-standalone: empty-binary-package
-W: electrotest-standalone source: file-without-copyright-information debian/README.Debian [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/changelog [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/control [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/copyright [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/patches/series [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/rules [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/source/control [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/source/format [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/source/options [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/source/patch-header [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/tests/control [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/upstream/metadata [debian/copyright]
-W: electrotest-standalone source: file-without-copyright-information debian/watch [debian/copyright]
 W: electrotest-standalone: initial-upload-closes-no-bugs [usr/share/doc/electrotest-standalone/changelog.Debian.gz:1]
-W: electrotest-standalone source: missing-license-paragraph-in-dep5-copyright __no_copyright_nor_license__ [debian/copyright:11]
-W: electrotest-standalone: readme-debian-contains-debmake-template [usr/share/doc/electrotest-standalone/README.Debian]
-W: electrotest-standalone source: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
-W: electrotest-standalone: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
-W: electrotest-standalone: wrong-bug-number-in-closes #nnnn [usr/share/doc/electrotest-standalone/changelog.Debian.gz:3]
 Finished running lintian.

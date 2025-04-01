@@ -4,17 +4,17 @@ Binary: electrotest-standalone
 Architecture: amd64 source
 Version: 1.0-1
 Checksums-Md5:
- 4c89ca9b8f3f81595c89dec7da05f415 939 electrotest-standalone_1.0-1.dsc
- a29aafece4907ce37bad634d68552f93 1744 electrotest-standalone_1.0-1_amd64.deb
+ 952712400df1472efca363e5b2cbe999 914 electrotest-standalone_1.0-1.dsc
+ 63d4341d5a7f81891a00a90119943a69 2080 electrotest-standalone_1.0-1_amd64.deb
 Checksums-Sha1:
- 9ab1dbf3cfb88926b174cb64a18b94ba3968aaea 939 electrotest-standalone_1.0-1.dsc
- c1b7eaf84283fba6a50242d68fc2bfa463da66a3 1744 electrotest-standalone_1.0-1_amd64.deb
+ 838344e0b5ba50ecf0b8f4235c5468c8fc823f87 914 electrotest-standalone_1.0-1.dsc
+ 43f129e781bd50fbafcf018e73ec90a65f466e17 2080 electrotest-standalone_1.0-1_amd64.deb
 Checksums-Sha256:
- 346a4d094cc1671728e703b9bee69a9c639b5c8bdd064aad1d331636489e1850 939 electrotest-standalone_1.0-1.dsc
- 8a0655dd0212d2bb4a927673007b63dda9333b66fd6ff2ae879567cbc5c1e313 1744 electrotest-standalone_1.0-1_amd64.deb
+ ea0c95aa342940c802df60d02d4646000dc27c45e79e5a32ae7cd52eea2974f5 914 electrotest-standalone_1.0-1.dsc
+ cc5205486e9cd21b04666a5d2afe026755f927c4b44ab6a16a670c77a1d93c4c 2080 electrotest-standalone_1.0-1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Tue, 01 Apr 2025 09:50:55 +0200
+Build-Date: Tue, 01 Apr 2025 10:39:20 +0200
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-configs

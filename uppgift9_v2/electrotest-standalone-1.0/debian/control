@@ -1,10 +1,10 @@
 Source: electrotest-standalone
 Section: devel
 Priority: optional
-Maintainer: linus <>
+Maintainer: linus <linus@example.com>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.5.1
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://example.com
 Rules-Requires-Root: no
 #Vcs-Git: https://salsa.debian.org/debian/electrotest-standalone.git
 #Vcs-Browser: https://salsa.debian.org/debian/electrotest-standalone

@@ -6,30 +6,29 @@ Architecture: source amd64
 Version: 1.0-1
 Distribution: UNRELEASED
 Urgency: low
-Maintainer: linus <>
-Changed-By: linus <>
+Maintainer: linus <linus@example.com>
+Changed-By: linus <linus@example.com>
 Description:
  electrotest-standalone - auto-generated package by debmake
 Changes:
  electrotest-standalone (1.0-1) UNRELEASED; urgency=low
  .
-   * Initial release. Closes: #nnnn
-     <nnnn is the bug number of your ITP>
+   * Initial release.
 Checksums-Sha1:
- 9ab1dbf3cfb88926b174cb64a18b94ba3968aaea 939 electrotest-standalone_1.0-1.dsc
+ 838344e0b5ba50ecf0b8f4235c5468c8fc823f87 914 electrotest-standalone_1.0-1.dsc
  3ea8e1f18a98d19d74f698ca8329d71c5ced294b 1469 electrotest-standalone_1.0.orig.tar.gz
- a3022a90bd37c0284a8d9d498e60a6ae0acba42e 2296 electrotest-standalone_1.0-1.debian.tar.xz
- 1c6fe3f7467fa4260e57737f1b824c3467b01c29 5734 electrotest-standalone_1.0-1_amd64.buildinfo
- c1b7eaf84283fba6a50242d68fc2bfa463da66a3 1744 electrotest-standalone_1.0-1_amd64.deb
+ 2faea257a05094c4d0798e1907b81ce8199a283e 2500 electrotest-standalone_1.0-1.debian.tar.xz
+ 90d6a321689c69ecffa24d8ff5006e835af51f0d 5734 electrotest-standalone_1.0-1_amd64.buildinfo
+ 43f129e781bd50fbafcf018e73ec90a65f466e17 2080 electrotest-standalone_1.0-1_amd64.deb
 Checksums-Sha256:
- 346a4d094cc1671728e703b9bee69a9c639b5c8bdd064aad1d331636489e1850 939 electrotest-standalone_1.0-1.dsc
+ ea0c95aa342940c802df60d02d4646000dc27c45e79e5a32ae7cd52eea2974f5 914 electrotest-standalone_1.0-1.dsc
  d5683d549fedbb00bd43695bd0d68c7413a1d8c59b76eaa9c1464b4738f60f9c 1469 electrotest-standalone_1.0.orig.tar.gz
- 3e07c26a6cd7a6fa8d5793c7e62ccb0ae1bbca8474c369b57f92fe66bccb3b3e 2296 electrotest-standalone_1.0-1.debian.tar.xz
- 77f9c8c83c1f29e72893a3a7ed51da8182e8b02ba9214f29ff39ceccfff13bdc 5734 electrotest-standalone_1.0-1_amd64.buildinfo
- 8a0655dd0212d2bb4a927673007b63dda9333b66fd6ff2ae879567cbc5c1e313 1744 electrotest-standalone_1.0-1_amd64.deb
+ cae360cd01c80fdcbda523afc55b53812769258489a42db7e9efceb006587180 2500 electrotest-standalone_1.0-1.debian.tar.xz
+ e7838f9bf818d9271e3a78101d1e97bfda97cf49002bada3bd5ed1d708602b4f 5734 electrotest-standalone_1.0-1_amd64.buildinfo
+ cc5205486e9cd21b04666a5d2afe026755f927c4b44ab6a16a670c77a1d93c4c 2080 electrotest-standalone_1.0-1_amd64.deb
 Files:
- 4c89ca9b8f3f81595c89dec7da05f415 939 devel optional electrotest-standalone_1.0-1.dsc
+ 952712400df1472efca363e5b2cbe999 914 devel optional electrotest-standalone_1.0-1.dsc
  d1dfa69c73e9f30c25acd07f1bdd443a 1469 devel optional electrotest-standalone_1.0.orig.tar.gz
- 484391c38579d9900b8dac98d33033dd 2296 devel optional electrotest-standalone_1.0-1.debian.tar.xz
- d35a5f34d83af6294e6aecc247647928 5734 devel optional electrotest-standalone_1.0-1_amd64.buildinfo
- a29aafece4907ce37bad634d68552f93 1744 devel optional electrotest-standalone_1.0-1_amd64.deb
+ b5e24907f0ce7cf886a29441cd146bf5 2500 devel optional electrotest-standalone_1.0-1.debian.tar.xz
+ 5257ff1f9f20b2dbad2a45967272a824 5734 devel optional electrotest-standalone_1.0-1_amd64.buildinfo
+ 63d4341d5a7f81891a00a90119943a69 2080 devel optional electrotest-standalone_1.0-1_amd64.deb
