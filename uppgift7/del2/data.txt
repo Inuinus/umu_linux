@@ -1,2 +1,0 @@
-testing data for strace
-hello
