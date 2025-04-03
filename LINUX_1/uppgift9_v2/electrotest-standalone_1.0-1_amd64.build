@@ -1,0 +1,131 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package electrotest-standalone
+dpkg-buildpackage: info: source version 1.0-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by linus <linus@example.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_auto_clean
+	make -j4 clean
+make[1]: Entering directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+rm -f electrotest-standalone
+make[1]: Leaving directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+   dh_clean
+	rm -f debian/debhelper-build-stamp
+	rm -rf debian/.debhelper/
+	rm -f -- debian/electrotest-standalone.substvars debian/files
+	rm -fr -- debian/electrotest-standalone/ debian/tmp/
+	find .  \( \( \
+		\( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS -o -path .\*/.pc -o -path .\*/_darcs \) -prune -o -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building electrotest-standalone using existing ./electrotest-standalone_1.0.orig.tar.gz
+dpkg-source: info: building electrotest-standalone in electrotest-standalone_1.0-1.debian.tar.xz
+dpkg-source: info: building electrotest-standalone in electrotest-standalone_1.0-1.dsc
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   dh_auto_build
+	make -j4 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+cc -o electrotest-standalone electrotest-standalone.c -lm
+make[1]: Leaving directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+   dh_auto_test
+	rm -fr -- /tmp/dh-xdg-rundir-3OzUEaW_
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+	rm -f -- debian/electrotest-standalone.substvars
+	rm -fr -- debian/.debhelper/generated/electrotest-standalone/ debian/electrotest-standalone/ debian/tmp/
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+mkdir -p debian/electrotest-standalone/usr/bin
+install -m 0755 electrotest-standalone debian/electrotest-standalone/usr/bin
+mkdir -p debian/electrotest-standalone/usr/share/man/man1/
+install -m 644 debian/electrotest-standalone.1 debian/electrotest-standalone/usr/share/man/man1/
+make[1]: Leaving directory '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+   dh_installdocs
+	install -m0755 -d debian/electrotest-standalone/usr/share/doc/electrotest-standalone
+	install -p -m0644 debian/README.Debian debian/electrotest-standalone/usr/share/doc/electrotest-standalone/README.Debian
+	install -p -m0644 debian/copyright debian/electrotest-standalone/usr/share/doc/electrotest-standalone/copyright
+   dh_installchangelogs
+	install -m0755 -d debian/electrotest-standalone/usr/share/doc/electrotest-standalone
+	install -p -m0644 debian/.debhelper/generated/electrotest-standalone/dh_installchangelogs.dch.trimmed debian/electrotest-standalone/usr/share/doc/electrotest-standalone/changelog.Debian
+   dh_installman
+	man-recode --to-code UTF-8 --suffix .dh-new debian/electrotest-standalone/usr/share/man/man1/electrotest-standalone.1
+	mv debian/electrotest-standalone/usr/share/man/man1/electrotest-standalone.1.dh-new debian/electrotest-standalone/usr/share/man/man1/electrotest-standalone.1
+	chmod 0644 -- debian/electrotest-standalone/usr/share/man/man1/electrotest-standalone.1
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+	cd debian/electrotest-standalone
+	chmod a-x usr/share/doc/electrotest-standalone/changelog.Debian usr/share/man/man1/electrotest-standalone.1
+	gzip -9nf usr/share/doc/electrotest-standalone/changelog.Debian usr/share/man/man1/electrotest-standalone.1
+	cd '/home/linus/github_space/umu_linux/uppgift9_v2/electrotest-standalone-1.0'
+   dh_fixperms
+	find debian/electrotest-standalone ! -type l -a -true -a -true -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/electrotest-standalone/usr/share/doc -type f -a -true -a ! -regex 'debian/electrotest-standalone/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/electrotest-standalone/usr/share/doc -type d -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/electrotest-standalone/usr/share/man -type f -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/electrotest-standalone -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.scss' -o -name '*.sass' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' -o -name '*.node' \) -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/electrotest-standalone/usr/bin -type f -a -true -a -true -print0 2>/dev/null | xargs -0r chmod a+x
+   dh_missing
+   dh_dwz -a
+	dwz -- debian/electrotest-standalone/usr/bin/electrotest-standalone
+dwz: debian/electrotest-standalone/usr/bin/electrotest-standalone: .debug_info section not present
+   dh_strip -a
+	install -m0755 -d debian/.debhelper/electrotest-standalone/dbgsym-root/usr/lib/debug/.build-id/40
+	objcopy --only-keep-debug --compress-debug-sections debian/electrotest-standalone/usr/bin/electrotest-standalone debian/.debhelper/electrotest-standalone/dbgsym-root/usr/lib/debug/.build-id/40/77ee0826e876a00a4ff88391f6cae6470f981f.debug
+	chmod 0644 -- debian/.debhelper/electrotest-standalone/dbgsym-root/usr/lib/debug/.build-id/40/77ee0826e876a00a4ff88391f6cae6470f981f.debug
+	strip --remove-section=.comment --remove-section=.note debian/electrotest-standalone/usr/bin/electrotest-standalone
+	objcopy --add-gnu-debuglink debian/.debhelper/electrotest-standalone/dbgsym-root/usr/lib/debug/.build-id/40/77ee0826e876a00a4ff88391f6cae6470f981f.debug debian/electrotest-standalone/usr/bin/electrotest-standalone
+	install -m0755 -d debian/.debhelper/electrotest-standalone/dbgsym-root/usr/share/doc
+	ln -s electrotest-standalone debian/.debhelper/electrotest-standalone/dbgsym-root/usr/share/doc/electrotest-standalone-dbgsym
+	install -m0755 -d debian/.debhelper/electrotest-standalone
+   dh_makeshlibs -a
+	rm -f debian/electrotest-standalone/DEBIAN/shlibs
+   dh_shlibdeps -a
+	install -m0755 -d debian/electrotest-standalone/DEBIAN
+	dpkg-shlibdeps -Tdebian/electrotest-standalone.substvars debian/electrotest-standalone/usr/bin/electrotest-standalone
+   dh_installdeb
+	install -m0755 -d debian/electrotest-standalone/DEBIAN
+   dh_gencontrol
+	install -m0755 -d debian/electrotest-standalone/DEBIAN
+	echo misc:Depends= >> debian/electrotest-standalone.substvars
+	echo misc:Pre-Depends= >> debian/electrotest-standalone.substvars
+	install -m0755 -d debian/.debhelper/electrotest-standalone/dbgsym-root/DEBIAN
+	dpkg-gencontrol -pelectrotest-standalone -ldebian/changelog -Tdebian/electrotest-standalone.substvars -Pdebian/.debhelper/electrotest-standalone/dbgsym-root -UPre-Depends -URecommends -USuggests -UEnhances -UProvides -UEssential -UConflicts -DPriority=optional -UHomepage -UImportant -UBuilt-Using -DAuto-Built-Package=debug-symbols -UProtected -DPackage=electrotest-standalone-dbgsym "-DDepends=electrotest-standalone (= \${binary:Version})" "-DDescription=debug symbols for electrotest-standalone" -DBuild-Ids=4077ee0826e876a00a4ff88391f6cae6470f981f -DSection=debug -UMulti-Arch -UReplaces -UBreaks
+	chmod 0644 -- debian/.debhelper/electrotest-standalone/dbgsym-root/DEBIAN/control
+	dpkg-gencontrol -pelectrotest-standalone -ldebian/changelog -Tdebian/electrotest-standalone.substvars -Pdebian/electrotest-standalone
+	chmod 0644 -- debian/electrotest-standalone/DEBIAN/control
+   dh_md5sums
+	install -m0755 -d debian/electrotest-standalone/DEBIAN
+	cd debian/electrotest-standalone >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	chmod 0644 -- debian/electrotest-standalone/DEBIAN/md5sums
+	install -m0755 -d debian/.debhelper/electrotest-standalone/dbgsym-root/DEBIAN
+	cd debian/.debhelper/electrotest-standalone/dbgsym-root >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	chmod 0644 -- debian/.debhelper/electrotest-standalone/dbgsym-root/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --root-owner-group --build debian/electrotest-standalone ..
+	dpkg-deb --root-owner-group --build debian/.debhelper/electrotest-standalone/dbgsym-root ..
+dpkg-deb: building package 'electrotest-standalone' in '../electrotest-standalone_1.0-1_amd64.deb'.
+dpkg-deb: building package 'electrotest-standalone-dbgsym' in '../electrotest-standalone-dbgsym_1.0-1_amd64.deb'.
+ dpkg-genbuildinfo -O../electrotest-standalone_1.0-1_amd64.buildinfo
+ dpkg-genchanges -O../electrotest-standalone_1.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian electrotest-standalone_1.0-1_amd64.changes ...
+W: electrotest-standalone-dbgsym: debug-file-with-no-debug-symbols [usr/lib/debug/.build-id/40/77ee0826e876a00a4ff88391f6cae6470f981f.debug]
+W: electrotest-standalone: initial-upload-closes-no-bugs [usr/share/doc/electrotest-standalone/changelog.Debian.gz:1]
+Finished running lintian.

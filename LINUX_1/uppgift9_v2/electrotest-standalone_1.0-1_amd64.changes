@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Tue, 01 Apr 2025 09:44:30 +0200
+Source: electrotest-standalone
+Binary: electrotest-standalone electrotest-standalone-dbgsym
+Architecture: source amd64
+Version: 1.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: linus <linus@example.com>
+Changed-By: linus <linus@example.com>
+Description:
+ electrotest-standalone - auto-generated package by debmake
+Changes:
+ electrotest-standalone (1.0-1) UNRELEASED; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1:
+ e8c6ccd903fcc9399207075fbe74db19b390aa8c 914 electrotest-standalone_1.0-1.dsc
+ 3ea8e1f18a98d19d74f698ca8329d71c5ced294b 1469 electrotest-standalone_1.0.orig.tar.gz
+ 192854203a2b17c5e3c70f9bb6c97ec9f3e01ced 2800 electrotest-standalone_1.0-1.debian.tar.xz
+ cbfc10eced5783ca96140d7e2969434b37c9ab54 2328 electrotest-standalone-dbgsym_1.0-1_amd64.deb
+ 2e53c1d9b59757a80edefdd7889f12f7e3c647c8 6059 electrotest-standalone_1.0-1_amd64.buildinfo
+ dc38a21b987d99801bede142fc32116d19a0748d 5312 electrotest-standalone_1.0-1_amd64.deb
+Checksums-Sha256:
+ a8f67157ff44e1187f160f8aa7e62c56659af6918e45f9c7e59c9259b466a150 914 electrotest-standalone_1.0-1.dsc
+ d5683d549fedbb00bd43695bd0d68c7413a1d8c59b76eaa9c1464b4738f60f9c 1469 electrotest-standalone_1.0.orig.tar.gz
+ ecfb681e2a2b9ebcc87696457be76bb16b4df8d562e00a4012b9bf2fd9d495a2 2800 electrotest-standalone_1.0-1.debian.tar.xz
+ e42c367aa860d332d75c6ad501e9d73e0112a7ec2a835658be03939ec3a200ed 2328 electrotest-standalone-dbgsym_1.0-1_amd64.deb
+ 79c0ac4227c741ceae88ede2c6ac972f54e11210958a31eacc993f9db9cda050 6059 electrotest-standalone_1.0-1_amd64.buildinfo
+ 0ae2fb1035dfeb1cad761f3d6663ffc5d2965c5cad5a2ac8da96414cc846a3b1 5312 electrotest-standalone_1.0-1_amd64.deb
+Files:
+ 75687d4385fdecbdddb99e3ebefc3eae 914 devel optional electrotest-standalone_1.0-1.dsc
+ d1dfa69c73e9f30c25acd07f1bdd443a 1469 devel optional electrotest-standalone_1.0.orig.tar.gz
+ de29ffa670f74ac362a5c9bb3f9df2d6 2800 devel optional electrotest-standalone_1.0-1.debian.tar.xz
+ 343e3dc1bb8bb84d7e8916956ae51b4a 2328 debug optional electrotest-standalone-dbgsym_1.0-1_amd64.deb
+ 27e9b21d28638de6efc8e44a2912062b 6059 devel optional electrotest-standalone_1.0-1_amd64.buildinfo
+ f639fc1799823aa4f0dc98bcdfa380a2 5312 devel optional electrotest-standalone_1.0-1_amd64.deb
