@@ -1,0 +1,7 @@
+På kurserna Linux som utvecklingsmiljö 1 och 2 som riktar sig till Linuxprogrammerare får man lära sig flera olika delområdet:
+Del får man kunskap i administration och arbetssätt i Linux som varje Linuxprogrammerare har nytta av i sitt dagliga jobb.
+Dels får man testa olika verktyg som underlättar för en Linuxprogrammerare såsom gdb, trace, diff mm. 
+Med dessa kurser bör man få med sig de förutsättningar som krävs för att gå vidare på mer specifika kurser som Linux i inbyggda system och Drivrutiner i Linux.
+
+
+
