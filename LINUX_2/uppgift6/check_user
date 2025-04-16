@@ -1,0 +1,13 @@
+#Scenario 1
+#auth	required	pam_unix.so
+#account	required	pam_unix.so
+
+#Scenario 2
+#auth	required	pam_access.so accessfile=/etc/security/myaccess.conf
+#account required	pam_unix.so
+
+#Scenario 3
+#auth	required	pam_unix.so
+auth	sufficient	pam_access.so accessfile=/etc/security/mygroupaccess.conf
+auth	required	pam_deny.so
+account	required	pam_unix.so
